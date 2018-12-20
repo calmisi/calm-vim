@@ -116,4 +116,4 @@ function install_vimplus_on_linux()
     fi
 }
 
-install_vimplus_on_linux
+begin_install_vimplus
