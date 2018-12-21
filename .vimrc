@@ -67,8 +67,11 @@ Plug 'chxuan/change-colorscheme'
 
 call plug#end()
 
+" 编辑vimrc文件
+nnoremap <leader>e :edit $MYVIMRC<cr>
 
-
+" 重新加载vimrc文件
+nnoremap <leader>s :source $MYVIMRC<cr>
 
 
 " 分屏窗口移动
