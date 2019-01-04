@@ -156,8 +156,8 @@ let g:tagbar_width = 40
 map <F2> :TagbarToggle<CR>
 
 " quickfix
-map <F6> :cn<CR>
-map <F7> :cp<CR>
+map <F7> :cn<CR>
+map <F6> :cp<CR>
 
 " markdown
 let uname = system('uname -s')
