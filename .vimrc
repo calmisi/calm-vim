@@ -159,6 +159,8 @@ map <F2> :TagbarToggle<CR>
 map <F7> :cn<CR>
 map <F6> :cp<CR>
 
+set pastetoggle=<F9>
+
 " markdown
 let uname = system('uname -s')
 if uname == "Darwin\n"
