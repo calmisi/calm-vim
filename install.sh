@@ -41,6 +41,7 @@ function copy_files()
     rm -rf ~/.vimrc.local
     cp ${PWD}/.vimrc.local ~
 
+    rm -rf ~/.vim
     mkdir ~/.vim
     rm -rf ~/.vim/colors
     ln -s ${PWD}/colors ~/.vim
