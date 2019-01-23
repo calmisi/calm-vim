@@ -146,6 +146,7 @@ set csverb
 
 endif
 " cscope key mappings
+map <F2> :cs find s <C-R>=expand("<cword>")<CR><CR>
 map <F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
 map <F4> :cs find c <C-R>=expand("<cword>")<CR><CR>
 map <F5> :cs find t <C-R>=expand("<cword>")<CR><CR>
@@ -153,7 +154,7 @@ map <F8> :Shell git blame -L<C-R>=line(".")<CR>,<C-R>=line(".")<CR> % \| awk 'NR
 
 " tagbar
 let g:tagbar_width = 40
-map <F2> :TagbarToggle<CR>
+map <F9> :TagbarToggle<CR>
 
 " quickfix
 map <F7> :cn<CR>
