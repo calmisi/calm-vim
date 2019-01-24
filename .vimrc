@@ -160,7 +160,7 @@ map <F9> :TagbarToggle<CR>
 map <F7> :cn<CR>
 map <F6> :cp<CR>
 
-set pastetoggle=<F9>
+set pastetoggle=<F10>
 
 " markdown
 let uname = system('uname -s')
