@@ -150,7 +150,7 @@ map <F2> :cs find s <C-R>=expand("<cword>")<CR><CR>
 map <F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
 map <F4> :cs find c <C-R>=expand("<cword>")<CR><CR>
 map <F5> :cs find t <C-R>=expand("<cword>")<CR><CR>
-map <F8> :Shell git blame -L<C-R>=line(".")<CR>,<C-R>=line(".")<CR> % \| awk 'NR==1{print $1}' \|xargs git show <CR><CR>
+map <C-g> :Shell git blame -L<C-R>=line(".")<CR>,<C-R>=line(".")<CR> % \| awk 'NR==1{print $1}' \|xargs git show <CR><CR>
 
 " tagbar
 let g:tagbar_width = 40
