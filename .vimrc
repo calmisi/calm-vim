@@ -1,3 +1,4 @@
+source ~/.vim/functions.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -68,11 +69,11 @@ Plug 'chxuan/change-colorscheme'
 call plug#end()
 
 " 编辑vimrc文件
-nnoremap <leader>e :edit $MYVIMRC<cr>
-
+nnoremap <leader>ee :call SwitchToBuf($MYVIMRC)<cr>
 " 重新加载vimrc文件
-nnoremap <leader>s :source $MYVIMRC<cr>
-
+nnoremap <leader>ss :source $MYVIMRC<cr>
+" When .vimrc is edited, reload it aotomaticly
+autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " 分屏窗口移动
 nnoremap <c-j> <c-w>j
@@ -161,6 +162,12 @@ map <F7> :cn<CR>
 map <F6> :cp<CR>
 
 set pastetoggle=<F10>
+nmap <C-S> :w<CR>
+vmap <C-S> <C-C>:w<CR>
+imap <C-S> <C-O>:w<CR>
+"nmap <C-S> :update<CR>
+"vmap <C-S> <C-C>:update<CR>
+"imap <C-S> <C-O>:update<CR>
 
 " markdown
 let uname = system('uname -s')

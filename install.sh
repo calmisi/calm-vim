@@ -49,7 +49,8 @@ function copy_files()
     rm -rf ~/.vim/git.vim
     ln -s ${PWD}/git.vim ~/.vim
 
-
+    rm -rf ~/.vim/functions.vim
+    ln -s ${PWD}/functions.vim ~/.vim
 }
 
 # 下载插件管理软件vim-plug
