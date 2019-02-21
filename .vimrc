@@ -65,6 +65,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chxuan/change-colorscheme'
+"Plug 'chxuan/vim-buffer'
 
 call plug#end()
 
@@ -90,8 +91,8 @@ let g:onedark_termcolors=256
 colorscheme onedark
 
 " nerdtree
-nnoremap <silent> <leader>n :NERDTreeToggle<cr>
-inoremap <silent> <leader>n <esc> :NERDTreeToggle<cr>
+nnoremap <silent> <F2> :NERDTreeToggle<cr>
+inoremap <silent> <F2> <ESC> :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -99,6 +100,11 @@ let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1 
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
+
+" tagbar
+let g:tagbar_width = 30
+nnoremap <silent> <F3> :TagbarToggle<CR>
+inoremap <silent> <F3> <esc> :TagbarToggle<CR>
 
 " YCM
 let g:ycm_confirm_extra_conf = 0 
@@ -135,7 +141,7 @@ if has("cscope")
 set csprg=/usr/bin/cscope " 指定用来执行cscope的命令
 set csto=0 " 设置cstag命令查找次序：0先找cscope数据库再找标签文件；1先找标签文件再找cscope数据库
 set cst " 同时搜索cscope数据库和标签文件
-set cscopequickfix=s-,c-,d-,i-,t-,e- " 使用QuickFix窗口来显示cscope查找结果
+set cscopequickfix=s-,c-,d-,i-,t-,e-,g- " 使用QuickFix窗口来显示cscope查找结果
 
 set nocsverb
 if filereadable("cscope.out") " 若当前目录下存在cscope数据库，添加该数据库到vim
@@ -147,21 +153,22 @@ set csverb
 
 endif
 " cscope key mappings
-map <F2> :cs find s <C-R>=expand("<cword>")<CR><CR>
-map <F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
-map <F4> :cs find c <C-R>=expand("<cword>")<CR><CR>
-map <F5> :cs find t <C-R>=expand("<cword>")<CR><CR>
+map <F4> :cs find t <C-R>=expand("<cword>")<CR><CR>
+map <F5> :cs find g <C-R>=expand("<cword>")<CR><CR>
+map <F6> :cs find c <C-R>=expand("<cword>")<CR><CR>
+map <F7> :cs find s <C-R>=expand("<cword>")<CR><CR>
 map <C-g> :Shell git blame -L<C-R>=line(".")<CR>,<C-R>=line(".")<CR> % \| awk 'NR==1{print $1}' \|xargs git show <CR><CR>
 
-" tagbar
-let g:tagbar_width = 40
-map <F9> :TagbarToggle<CR>
+map <F9> :vsp<CR>
 
 " quickfix
-map <F7> :cn<CR>
-map <F6> :cp<CR>
+map <C-M> :cn<CR>
+map <C-N> :cp<CR>
+map <C-Q> :copen<CR>
+map <C-W> :cclose<CR>
 
 set pastetoggle=<F10>
+
 nmap <C-S> :w<CR>
 vmap <C-S> <C-C>:w<CR>
 imap <C-S> <C-O>:w<CR>
@@ -199,7 +206,7 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 "set cc=80
-"set tw=78 fo+=Mm
+"set tw=79 fo+=Mm
 source ~/.vim/git.vim
 
 "load project related configuration in current directory
