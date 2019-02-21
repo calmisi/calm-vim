@@ -201,3 +201,8 @@ match OverLength /\%81v.\+/
 "set cc=80
 "set tw=78 fo+=Mm
 source ~/.vim/git.vim
+
+"load project related configuration in current directory
+if filereadable(".workspace.vim")
+	source .workspace.vim
+endif
