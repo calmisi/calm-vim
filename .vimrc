@@ -141,7 +141,7 @@ if has("cscope")
 set csprg=/usr/bin/cscope " 指定用来执行cscope的命令
 set csto=0 " 设置cstag命令查找次序：0先找cscope数据库再找标签文件；1先找标签文件再找cscope数据库
 set cst " 同时搜索cscope数据库和标签文件
-set cscopequickfix=s-,c-,d-,i-,t-,e-,g- " 使用QuickFix窗口来显示cscope查找结果
+set cscopequickfix=s-,c-,d-,i-,t-,e- " 使用QuickFix窗口来显示cscope查找结果
 
 set nocsverb
 if filereadable("cscope.out") " 若当前目录下存在cscope数据库，添加该数据库到vim
