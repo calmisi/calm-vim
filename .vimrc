@@ -159,15 +159,14 @@ map <F6> :cs find c <C-R>=expand("<cword>")<CR><CR>
 map <F7> :cs find s <C-R>=expand("<cword>")<CR><CR>
 map <C-g> :Shell git blame -L<C-R>=line(".")<CR>,<C-R>=line(".")<CR> % \| awk 'NR==1{print $1}' \|xargs git show <CR><CR>
 
-map <F9> :vsp<CR>
-
 " quickfix
-map <C-M> :cn<CR>
-map <C-N> :cp<CR>
-map <C-Q> :copen<CR>
-map <C-W> :cclose<CR>
+map <F9> :cp<CR>
+map <F10> :cn<CR>
 
-set pastetoggle=<F10>
+nnoremap <leader>sp :sp<cr>
+nnoremap <leader>vsp :vsp<cr>
+
+set pastetoggle=<F11>
 
 nmap <C-S> :w<CR>
 vmap <C-S> <C-C>:w<CR>
