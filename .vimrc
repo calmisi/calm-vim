@@ -86,9 +86,9 @@ nnoremap <c-l> <c-w>l
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 " 主题
-set background=dark
+"set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+"colorscheme onedark
 
 " nerdtree
 nnoremap <silent> <F2> :NERDTreeToggle<cr>
