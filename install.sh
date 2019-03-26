@@ -72,7 +72,7 @@ function compile_ycm_on_linux()
     ./install.py --clang-completer
 }
 
-function begin_install_vimplus()
+function begin_install_calmvim()
 {
     copy_files
     download_vim_plug
@@ -81,41 +81,42 @@ function begin_install_vimplus()
 }
 
 # 在ubuntu发行版安装vimplus
-function install_vimplus_on_ubuntu()
+function install_calmvim_on_ubuntu()
 {
     install_prepare_software_on_ubuntu
-    begin_install_vimplus
+    begin_install_calmvim
 }
 
 # 在centos发行版安装vimplus
-function install_vimplus_on_centos()
+function install_calmvim_on_centos()
 {
     install_prepare_software_on_centos
-    begin_install_vimplus
+    begin_install_calmvim
 }
 
 # 在archlinux发行版安装vimplus
-function install_vimplus_on_archlinux()
+function install_calmvim_on_archlinux()
 {
     install_prepare_software_on_archlinux
-    begin_install_vimplus
+    begin_install_calmvim
 }
 
 # 在linux平台安装vimplus
-function install_vimplus_on_linux()
+function install_calmvim_on_linux()
 {
     type=`get_linux_platform_type`
     echo "linux platform type: "${type}
 
     if [ ${type} == "ubuntu" ]; then
-        install_vimplus_on_ubuntu
+        install_calmvim_on_ubuntu
     elif [ ${type} == "centos" ]; then
-        install_vimplus_on_centos
+        install_calmvim_on_centos
     elif [ ${type} == "archlinux" ]; then
-        install_vimplus_on_archlinux
+        install_calmvim_on_archlinux
     else
         echo "not support this linux platform type: "${type}
     fi
 }
 
-begin_install_vimplus
+begin_install_calmvim
+#install_calmvim_on_linux
