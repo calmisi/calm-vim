@@ -163,6 +163,8 @@ map <C-g> :Shell git blame -L<C-R>=line(".")<CR>,<C-R>=line(".")<CR> % \| awk 'N
 map <F9> :cp<CR>
 map <F10> :cn<CR>
 
+nnoremap <leader>cw :bo cw<cr>
+
 nnoremap <leader>sp :sp<cr>
 nnoremap <leader>vsp :vsp<cr>
 
