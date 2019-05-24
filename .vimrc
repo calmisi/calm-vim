@@ -88,7 +88,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " 主题
 "set background=dark
 let g:onedark_termcolors=256
-"colorscheme onedark
+colorscheme onedark
+"colorscheme desert
 
 " nerdtree
 nnoremap <silent> <F2> :NERDTreeToggle<cr>
@@ -206,8 +207,10 @@ let g:airline_right_alt_sep = ''
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-"set cc=80
-"set tw=79 fo+=Mm
+"set cc=80,120
+set cc=80
+set tw=79 fo+=Mm
+
 source ~/.vim/git.vim
 
 "load project related configuration in current directory
