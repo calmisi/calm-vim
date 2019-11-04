@@ -118,5 +118,6 @@ function install_calmvim_on_linux()
     fi
 }
 
+install_prepare_software_on_ubuntu
 begin_install_calmvim
 #install_calmvim_on_linux
