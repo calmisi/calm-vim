@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # 获取linux平台类型，ubuntu还是centos
 function get_linux_platform_type()
 {
@@ -119,5 +121,11 @@ function install_calmvim_on_linux()
 }
 
 install_prepare_software_on_ubuntu
-begin_install_calmvim
+
+#begin_install_calmvim
+    copy_files
+    download_vim_plug
+    install_vim_plugin
+    compile_ycm_on_linux
+
 #install_calmvim_on_linux
