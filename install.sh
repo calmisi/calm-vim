@@ -61,6 +61,13 @@ function download_vim_plug()
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
+function copy_vim_plug()
+{
+    git submodule update --recursive
+    mkdir -p ~/.vim/autoload
+    cp ./vim-plug/plug.vim ~/.vim/autoload/plug.vim
+}
+
 # 安装vim插件
 function install_vim_plugin()
 {
@@ -77,7 +84,7 @@ function compile_ycm_on_linux()
 function begin_install_calmvim()
 {
     copy_files
-    download_vim_plug
+    copy_vim_plug
     install_vim_plugin
     compile_ycm_on_linux
 }
@@ -124,7 +131,7 @@ install_prepare_software_on_ubuntu
 
 #begin_install_calmvim
     copy_files
-    download_vim_plug
+    copy_vim_plug
     install_vim_plugin
     compile_ycm_on_linux
 
