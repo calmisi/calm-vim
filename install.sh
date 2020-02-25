@@ -63,6 +63,7 @@ function download_vim_plug()
 
 function copy_vim_plug()
 {
+    git submodule init
     git submodule update --recursive
     mkdir -p ~/.vim/autoload
     cp ./vim-plug/plug.vim ~/.vim/autoload/plug.vim
@@ -133,6 +134,6 @@ install_prepare_software_on_ubuntu
     copy_files
     copy_vim_plug
     install_vim_plugin
-    compile_ycm_on_linux
+    #compile_ycm_on_linux
 
 #install_calmvim_on_linux

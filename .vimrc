@@ -56,7 +56,7 @@ set confirm             " 在处理未保存或只读文件的时候，弹出确
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
