@@ -209,7 +209,7 @@ match OverLength /\%81v.\+/
 
 "set cc=80,120
 set cc=80
-set tw=79 fo+=Mm
+"set tw=79 fo+=Mm
 
 source ~/.vim/git.vim
 
