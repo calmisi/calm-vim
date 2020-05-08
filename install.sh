@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+#set -e
 
 # 获取linux平台类型，ubuntu还是centos
 function get_linux_platform_type()
@@ -87,7 +87,7 @@ function begin_install_calmvim()
     copy_files
     copy_vim_plug
     install_vim_plugin
-    compile_ycm_on_linux
+#    compile_ycm_on_linux
 }
 
 # 在ubuntu发行版安装vimplus
@@ -128,12 +128,11 @@ function install_calmvim_on_linux()
     fi
 }
 
-install_prepare_software_on_ubuntu
+#install_prepare_software_on_ubuntu
 
 #begin_install_calmvim
-    copy_files
-    copy_vim_plug
-    install_vim_plugin
-    #compile_ycm_on_linux
+#    copy_files
+#    copy_vim_plug
+#    install_vim_plugin
 
-#install_calmvim_on_linux
+install_calmvim_on_linux
